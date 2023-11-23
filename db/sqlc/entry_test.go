@@ -44,6 +44,10 @@ func TestGetEntry(t *testing.T) {
 
 func TestListEntries(t *testing.T) {
 
+	for i:=0; i< 10; i++ {
+		CreateRandomEntry(t)
+	}
+
 	arg := ListEntriesParams{
 		Offset: 5,
 		Limit:  5,
